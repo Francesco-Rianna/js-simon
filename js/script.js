@@ -70,8 +70,13 @@ setTimeout(function () {
 setTimeout(function () {
     // stampo il risultato sempre in pagina di quanti numeri sono stati indovinati e quali
 
-    userMessage = prompt('hai indovinato ' + guessedNumbers + ' numeri')
-    secondUserMessage = prompt('ecco i numeri indovinati ' + arrayGuessedNumber)
+    if (guessedNumbers != 0) {
+        userMessage = prompt('hai indovinato ' + guessedNumbers + ' numeri')
+        secondUserMessage = prompt('ecco i numeri indovinati ' + arrayGuessedNumber)
+    } else {
+        userMessage = prompt('Non hai indovinato nessun numero')
+    }
+
 
 }, 6000)
 
