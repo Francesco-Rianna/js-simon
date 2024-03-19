@@ -19,17 +19,32 @@ for (let i = 0; i < 5; i++) {
 }
 // stampo in pagina i 5 numeri dell'array
 containerDom.innerHTML += arrayNumbersCpu
-
-
-
-
-
 // faccio una funzione che mi fa scomparire dopo 30 secondi i numeri generati
-// chiedo all'utente quali erano i numeri in  pagina
+// TROVA FUNZIONE NELLA SEZIONE FUNCTIONS
+
 // confronto i numeri inseriti dall'utente con quelli che erano stampati in pagina
 // stampo il risultato sempre in pagina di quanti numeri sono stati indovinati
 
 // FUNCTIONS
+// funzione trovata sul w3school https://www.w3schools.com/js/js_random.asp
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+// funzione per eliminare l'array di numeri dalla pagina 
+setTimeout(function () {
+
+    containerDom.innerHTML = ''
+}, 3000)
+
+setTimeout(function () {
+    for (let i = 0; i < 5; i++) {
+        const askNumber = parseInt(prompt('Indovina i 5 numeri presenti in pagina poco fa'))
+        console.log(askNumber)
+    }
+}, 4000)
+
+
+
+
+
+
